@@ -7,11 +7,11 @@ import { render } from '@testing-library/react';
 class Modal extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show;
+    return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
   }
 
   componentWillUpdate() {
-    console.log('[Modal] Will update');
+    // console.log('[Modal] Will update');
   }
 
   render() {
